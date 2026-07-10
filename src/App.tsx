@@ -6,6 +6,7 @@ import { RouteGuard } from '@/components/common/RouteGuard';
 import { MainLayout } from '@/components/layouts/MainLayout';
 import IntersectObserver from '@/components/common/IntersectObserver';
 import { OfflineBanner } from '@/components/common/OfflineBanner';
+import { Analytics } from '@vercel/analytics/react';
 
 // Auth pages
 import Login from '@/pages/auth/Login';
@@ -74,6 +75,7 @@ const App: React.FC = () => {
           <Toaster />
         </RouteGuard>
       </AuthProvider>
+      <Analytics />
     </Router>
   );
 };
